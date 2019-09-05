@@ -24,15 +24,27 @@ In this challenge, create a web API around the following resources: `Projects` a
 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
-- [ ] Mention two parts of Express that you learned about this week.
+- [X] Mention two parts of Express that you learned about this week.
 
-- [ ] Describe Middleware?
+Routing - Express allows us to build API endpoints that build on one another and do various functions within a certain category. We can have /users and build off of that to make /users/id or /products with /products/id.
 
-- [ ] Describe a Resource?
+Middleware - Middleware is a set of functions that get executed in the order that we introduce them to the server. There's a lot we can do with middleware, but it can really make validation a lot easier to accomplish by making a validator middleware function that we plug into our endpoints. 
 
-- [ ] What can the API return to help clients know if a request was successful?
+- [X] Describe Middleware?
 
-- [ ] How can we partition our application into sub-applications?
+I believe the above answer is sufficient.
+
+- [X] Describe a Resource?
+
+A resource is whatever we have stored in our API that a user/client is trying to access. For example, it could be a list of users accessed by /users.
+
+- [X] What can the API return to help clients know if a request was successful?
+
+HTTP Status Codes are designated response codes to let our users know what exactly happened with their request.
+
+- [X] How can we partition our application into sub-applications?
+
+Express Routers - this allows us to modularize our code so that we don't have one massive server.js file but rather smaller files that document each endpoint into categories.
 
 ## Project Setup
 
