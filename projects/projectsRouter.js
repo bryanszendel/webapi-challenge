@@ -1,9 +1,10 @@
 const express = require('express')
 const projects = require('../data/helpers/projectModel')
+var cors = require('cors')
 
 const router = express.Router()
 
-router.get('/', (req, res) => {
+router.get('/', cors(), (req, res) => {
   projects.get()
     .then(projects => {
       res.status(200).json(projects)
