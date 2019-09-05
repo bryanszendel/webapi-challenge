@@ -50,18 +50,18 @@ Express Routers - this allows us to modularize our code so that we don't have on
 
 Follow these steps to set up and work on your project:
 
-- [ ] Create a forked copy of this project.
-- [ ] Add your _Project Manager_ as collaborator on Github.
-- [ ] Clone your forked version of the Repository.
-- [ ] Create a new Branch on the clone: git checkout -b `<firstName-lastName>`.
-- [ ] Implement the project on this Branch, committing changes regularly.
-- [ ] Push commits: git push origin `<firstName-lastName>`.
+- [X] Create a forked copy of this project.
+- [X] Add your _Project Manager_ as collaborator on Github.
+- [X] Clone your forked version of the Repository.
+- [X] Create a new Branch on the clone: git checkout -b `<firstName-lastName>`.
+- [X] Implement the project on this Branch, committing changes regularly.
+- [X] Push commits: git push origin `<firstName-lastName>`.
 
 Follow these steps for completing your project.
 
-- [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master on your fork. **Please don't merge your own pull request.**
-- [ ] Add your _Project Manager_ as a Reviewer on the Pull-request
-- [ ] Your _Project Manager_ will count the challenge as done by merging the branch into _master_.
+- [X] Submit a Pull-Request to merge <firstName-lastName> Branch into master on your fork. **Please don't merge your own pull request.**
+- [X] Add your _Project Manager_ as a Reviewer on the Pull-request
+- [X] Your _Project Manager_ will count the challenge as done by merging the branch into _master_.
 
 ## Database Persistence Helpers
 
@@ -85,8 +85,8 @@ The `projectModel.js` helper includes an extra method called `getProjectActions(
 
 Design and build the necessary endpoints to:
 
-- [ ] Perform CRUD operations on [ ] _projects_ and [X] _actions_. When adding an action, make sure the `project_id` provided belongs to an existing `project`. If you try to add an action with an `id` of 3 and there is no project with that `id` the database will return an error.
-- [ ] Retrieve the list of actions for a project.
+- [X] Perform CRUD operations on [ ] _projects_ and [X] _actions_. When adding an action, make sure the `project_id` provided belongs to an existing `project`. If you try to add an action with an `id` of 3 and there is no project with that `id` the database will return an error.
+- [X] Retrieve the list of actions for a project.
 
 ### Database Schemas
 
