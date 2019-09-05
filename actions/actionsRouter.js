@@ -27,19 +27,34 @@ router.post('/', validateAction, (req, res) => {
   let newAction = req.body
   actions.insert(newAction)
     .then(action => {
-      res.status(200).json(action)
+      res.status(201).json(action)
     })
     .catch(error => {
       res.status(500).json({ error: "Error creating the new action." })
     })
 });
 
-router.put('/:id', (req, res) => {
-  
+router.put('/:id', validateActionId, validateAction, (req, res) => {
+  const id = req.params.id
+  const newAction = req.body
+  actions.update(id, newAction)
+    .then(updated => {
+      res.status(200).json(updated)
+    })
+    .catch(error => {
+      res.status(500).json({ error: "Error updating the action." })
+    })
 });
 
-router.delete('/:id', (req, res) => {
-  
+router.delete('/:id', validateActionId, (req, res) => {
+  const id = req.params.id
+  actions.remove(id)
+    .then(removed => {
+      res.status(200).json(removed)
+    })
+    .catch(error => {
+      res.status(500).json({ error: "Error removing the action." })
+    })
 });
 
 // middleware
