@@ -34,5 +34,19 @@ router.delete('/:id', (req, res) => {
 });
 
 // middleware
+function validateProjectId(req, res, next) {
+  const id = req.params.id
+  projects.get(id)
+    .then(project => {
+      if (project.id) {
+        req.project = project
+        next()
+      }
+    })
+    .catch(error => {
+      res.status(400).json({ message: "Invalid project ID."})
+      next()
+    })
+}
 
 module.exports = router;
